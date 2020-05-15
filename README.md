@@ -1,3 +1,4 @@
+(Feel free to suggest changes)
 ## Papers
 - Merging Phoneme and Char representations: https://arxiv.org/pdf/1811.07240.pdf
 - Tacotron transfer learning : https://arxiv.org/pdf/1904.06508.pdf

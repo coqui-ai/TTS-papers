@@ -84,5 +84,5 @@
     - Multi-band model has 1.9m parameters (quite small).
     - Claimed to be 7x faster than MelGAN
 
-## From Internet (Blogs, Videos etc)
+## From the Internet (Blogs, Videos etc)
 ...

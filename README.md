@@ -27,6 +27,7 @@
     - Speech style embedding with Mixture of Gaussian model.
     - Model is large and havier than vanilla Tacotron
     - MOS values are slighly better than public Tacotron implementation.
+- Efficiently Trainable Text-to-Speech System Based on Deep Convolutional Networks with Guided Attention : https://arxiv.org/pdf/1710.08969.pdf 
 
 ## Multi-Speaker Papers
 - Training Multi-Speaker Neural Text-to-Speech Systems using Speaker-Imbalanced Speech Corpora - https://arxiv.org/abs/1904.00771
@@ -85,4 +86,16 @@
     - Claimed to be 7x faster than MelGAN
 
 ## From the Internet (Blogs, Videos etc)
-...
+
+## Paper Discussion
+- Tacotron 2 : https://www.youtube.com/watch?v=2iarxxm-v9w
+
+## Talks
+- End-to-End Text-to-Speech Synthesis, Part 1 : https://www.youtube.com/watch?v=RNKrq26Z0ZQ
+- Speech synthesis from neural decoding of spoken sentences | AISC : https://www.youtube.com/watch?v=MNDtMDPmnMo
+- Generative Text-to-Speech Synthesis : https://www.youtube.com/watch?v=j4mVEAnKiNg
+- SPEECH SYNTHESIS FOR THE GAMING INDUSTRY : https://www.youtube.com/watch?v=aOHAYe4A-2Q
+
+## General
+- Modern Text-to-Speech Systems Review : https://www.youtube.com/watch?v=8rXLSc-ZcRY
+

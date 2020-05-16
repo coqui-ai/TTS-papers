@@ -87,6 +87,7 @@
 
 ## From the Internet (Blogs, Videos etc)
 
+## Videos
 ## Paper Discussion
 - Tacotron 2 : https://www.youtube.com/watch?v=2iarxxm-v9w
 
@@ -99,3 +100,5 @@
 ## General
 - Modern Text-to-Speech Systems Review : https://www.youtube.com/watch?v=8rXLSc-ZcRY
 
+## Blogs
+- Text to Speech Deep Learning Architectures : http://www.erogol.com/text-speech-deep-learning-architectures/

@@ -1,5 +1,5 @@
 (Feel free to suggest changes)
-## Papers
+# Papers
 - Merging Phoneme and Char representations: https://arxiv.org/pdf/1811.07240.pdf
 - Tacotron transfer learning : https://arxiv.org/pdf/1904.06508.pdf
 - phoneme timing from attention: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8683827
@@ -85,19 +85,19 @@
     - Multi-band model has 1.9m parameters (quite small).
     - Claimed to be 7x faster than MelGAN
 
-## From the Internet (Blogs, Videos etc)
+# From the Internet (Blogs, Videos etc)
 
 ## Videos
-## Paper Discussion
+### Paper Discussion
 - Tacotron 2 : https://www.youtube.com/watch?v=2iarxxm-v9w
 
-## Talks
+### Talks
 - End-to-End Text-to-Speech Synthesis, Part 1 : https://www.youtube.com/watch?v=RNKrq26Z0ZQ
 - Speech synthesis from neural decoding of spoken sentences | AISC : https://www.youtube.com/watch?v=MNDtMDPmnMo
 - Generative Text-to-Speech Synthesis : https://www.youtube.com/watch?v=j4mVEAnKiNg
 - SPEECH SYNTHESIS FOR THE GAMING INDUSTRY : https://www.youtube.com/watch?v=aOHAYe4A-2Q
 
-## General
+### General
 - Modern Text-to-Speech Systems Review : https://www.youtube.com/watch?v=8rXLSc-ZcRY
 
 ## Blogs

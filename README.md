@@ -95,7 +95,7 @@
 	- In inference network runs in reverse direction and give mel-specs are converted to audio samples.
 	- Training has been done using 8 Nvidia V100 with 32GB ram, batch size 24. (Expensive)
 	
- - SqueezeWave: https://arxiv.org/pdf/2001.05685.pdf , code: https: //github.com/tianrengao/SqueezeWave 
+ - SqueezeWave: https://arxiv.org/pdf/2001.05685.pdf , code: https://github.com/tianrengao/SqueezeWave 
  	- ~5-13x faster than real-time
 	- WaveGlow redanduncies: Long audio samples, upsamples mel-specs, large channel dimensions in WN function.
 	- Fixes: More but shorter audio samples as input,  (L=2000, C=8 vs L=64, C=256)

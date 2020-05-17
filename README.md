@@ -50,7 +50,7 @@
     - ~1M model parameters (very small)
     - Slightly worse than WaveRNN 
 - Improving FFTNEt
-    - https://www.okamotocamera.com/slt_2018.pdf
+    - https://www.okamotocamera.com/slt_2018.pdfF
     - https://www.okamotocamera.com/slt_2018.pdf
 - FFTnet
     - https://gfx.cs.princeton.edu/pubs/Jin_2018_FAR/clips/clips.php
@@ -84,6 +84,28 @@
     band predictions with PQMF synthesis filters.
     - Multi-band model has 1.9m parameters (quite small).
     - Claimed to be 7x faster than MelGAN
+    - On a Chinese dataset: MOS 4.22
+ - WaveGLow: https://arxiv.org/abs/1811.00002
+ 	- Very large model (268M parameters)
+	- Hard to train since on 12GB GPU it can only takes batch size 1.
+	- Real-time inference due to the use of convolutions.
+	- Based on Invertable Normalizing Flow. (Great tutorial https://blog.evjang.com/2018/01/nf1.html
+)
+	- Model learns and invetible mapping of audio samples to mel-spectrograms with Max Likelihood loss.
+	- In inference network runs in reverse direction and give mel-specs are converted to audio samples.
+	- Training has been done using 8 Nvidia V100 with 32GB ram, batch size 24. (Expensive)
+	
+ - SqueezeWave: https://arxiv.org/pdf/2001.05685.pdf , code: https: //github.com/tianrengao/SqueezeWave 
+ 	- ~5-13x faster than real-time
+	- WaveGlow redanduncies: Long audio samples, upsamples mel-specs, large channel dimensions in WN function.
+	- Fixes: More but shorter audio samples as input,  (L=2000, C=8 vs L=64, C=256)
+	- L=64 matchs the mel-spec resolution so no upsampling necessary.
+	- Use depth-wise separable convolutions in WN modules.
+	- Use regular convolution instead of dilated since audio samples are shorter.
+	- Do not split module outputs to residual and network output, assuming these vectors are almost identical.
+	- Training has been done using Titan RTX 24GB batch size 96 for 600k iterations.
+	- MOS on LJSpeech: WaveGLow - 4.57, SqueezeWave (L=128 C=256) - 4.07 and SqueezeWave (L=64 C=256) - 3.77
+	- Smallest model has 21K samples per second on Raspi3.
 
 # From the Internet (Blogs, Videos etc)
 

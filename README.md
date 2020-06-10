@@ -28,6 +28,30 @@
     - Model is large and havier than vanilla Tacotron
     - MOS values are slighly better than public Tacotron implementation.
 - Efficiently Trainable Text-to-Speech System Based on Deep Convolutional Networks with Guided Attention : https://arxiv.org/pdf/1710.08969.pdf 
+    
+<details>
+<summary> End-to-End Adversarial Text-to-Speech: http://arxiv.org/abs/2006.03575 (Click to Expand)</summary> 
+	
+  - end2end feed-forward TTS learning.
+  - Character alignment has been done with a separate aligner module.	
+  - The aligner predicts length of each character.
+		- The center location of a char is found wrt the total length of the previous characters.
+		- Char positions are interpolated with a Gaussian window wrt the real audio length.
+	- audio output is computed in mu-law domain. (I don't have a reasoning for this)
+	- use only 2 secs audio windows for traning.
+	- GAN-TTS generator is used to produce audio signal.
+	- RWD is used as a audio level discriminator.
+	- MelD: They use BigGAN-deep architecture as spectrogram level discriminator regading the problem as image reconstruction.
+	- Spectrogram loss
+		- Using only adversarial feed-back is not enough to learn the char alignments. They use a spectrogram loss b/w predicted spectrograms and ground-truth specs.
+		- Note that model predicts audio signals. Spectrograms above are computed from the generated audio.
+		- Dynamic Time Wraping is used to compute a minimal-cost alignment b/w generated spectrograms and ground-truth.
+		- It involves a dynamic programming approach to find a minimal-cost alignment.
+	- Aligner length loss is used to penalize the aligner for predicting different than the real audio length.
+	- They train the model with multi speaker dataset but report results on the best performing speaker.
+	- Ablation Study importance of each component: (LengthLoss and SpectrogramLoss) > RWD > MelD > Phonemes > MultiSpeakerDataset.
+	- My 2 cents: It is a feed forward model which provides end-2-end speech synthesis with no need to train a separate vocoder model. However, it is very complicated model with a lot of hyperparameters and implementation details. Also the final result is not close to the state of the art. I think we need to find specific algorithms for learning character alignments which would reduce the need of tunning a combination of different algorithms.
+</details>
 
 ## Multi-Speaker Papers
 - Training Multi-Speaker Neural Text-to-Speech Systems using Speaker-Imbalanced Speech Corpora - https://arxiv.org/abs/1904.00771

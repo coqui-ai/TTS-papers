@@ -5,7 +5,6 @@
 - phoneme timing from attention: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8683827
 - SEMI-SUPERVISED TRAINING FOR IMPROVING DATA EFFICIENCY IN END-TO-ENDSPEECH SYNTHESI - https://arxiv.org/pdf/1808.10128.pdf
 - Listening while Speaking: Speech Chain by Deep Learning - https://arxiv.org/pdf/1707.04879.pdf
-- FastSpeech: https://arxiv.org/abs/1905.09263
 - GENERALIZED END-TO-END LOSS FOR SPEAKER VERIFICATION: https://arxiv.org/pdf/1710.10467.pdf
 - Es-Tacotron2: Multi-Task Tacotron 2 with Pre-Trained Estimated Network for Reducing the Over-Smoothness Problem: https://www.mdpi.com/2078-2489/10/4/131/pdf
 	- Against Over-Smoothness

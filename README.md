@@ -67,6 +67,32 @@
 
 </details>
 
+<details>
+<summary> Glow-TTS: https://arxiv.org/pdf/2005.11129.pdf (Click to Expand)</summary> 
+	
+  - Use Monotonic Alignment Search to learn the alignment b/w text and spectrogram
+  - This alignment is used to train a Duration Predictor to be used at inference.
+  - Encoder maps each character to a Gaussian Distribution.
+  - Decoder maps each spectrogram frame to a latent vector using Normalizing Flow (Glow Layers)
+  - Encoder and Decoder outputs are aligned with MAS.
+  - At each iteration first the most probable alignment is found by MAS and this alignment is used to update mode parameters.
+  - A duration predictor is trained to predict the number of spectrogram frames for each character.
+  - At inference only the duration predictor is used instead of MAS
+  - Encoder has the architecture of the TTS transformer with 2 updates
+  - Instead of absolute positional encoding, they use realtive positional encoding.
+  - They also use a residual connection for the Encoder Prenet.
+  - Decoder has the same architecture as the Glow model.
+  - They train both single and multi-speaker model.
+  - It is showed experimentally, Glow-TTS is more robust against long sentences compared to original Tacotron2
+  - 15x faster than Tacotron2 at inference
+  - My 2 cents: Their samples sound not as natural as Tacotron. I believe normal attention models still generate more natural speech since the attention learns to map characters to model outputs directly. However, using Glow-TTS might be a good alternative for hard datasets.
+  - Samples: https://github.com/jaywalnut310/glow-tts
+  - Repository: https://github.com/jaywalnut310/glow-tts
+  ![image](https://user-images.githubusercontent.com/1402048/85527284-06035a80-b60b-11ea-8165-b2f3e841f77f.png)
+
+
+</details>
+
 ## Multi-Speaker Papers
 - Training Multi-Speaker Neural Text-to-Speech Systems using Speaker-Imbalanced Speech Corpora - https://arxiv.org/abs/1904.00771
 - Deep Voice 2 - https://papers.nips.cc/paper/6889-deep-voice-2-multi-speaker-neural-text-to-speech.pdf

@@ -125,6 +125,7 @@
     - https://arxiv.org/pdf/1811.06292.pdf
 - LPCNet
     - https://arxiv.org/pdf/1810.11846.pdf
+    - https://arxiv.org/pdf/2001.11686.pdf
 - ExciteNet
     - https://arxiv.org/pdf/1811.04769v3.pdf
 - GELP: GAN-Excited Linear Prediction for Speech Synthesis fromMel-spectrogram

@@ -94,6 +94,7 @@
 
 <details>
 <summary> Non-Autoregressive Neural Text-to-Speech: http://arxiv.org/abs/1905.08459 (Click to Expand)</summary> 
+	
    - A derivation of Deep Voice 3 model using non-causal convolutional layers.
    - Teacher-Student paradigm to train annon-autoregressive student with multiple attention blocks from an autoregressive teacher model.
    - The teacher is used to generate text-to-spectrogram alignments to be used by the student model.
@@ -102,6 +103,23 @@
    - The student uses dot-product attention with query, key and value vectors. The query is only positinal encoding vectors. The key and the value are the encoder outputs.
    - Proposed model is heavily tied to the positional encoding which also relies on different constant values.
   ![image](https://user-images.githubusercontent.com/1402048/87929772-3e218000-ca87-11ea-9f13-9869bee96b57.png)
+</details>
+
+<details>
+<summary> Double Decoder Consistency: https://erogol.com/solving-attention-problems-of-tts-models-with-double-decoder-consistency (Click to Expand)</summary> 
+	
+   - The model uses a Tacotron like architecture but with 2 decoders and a postnet.
+   - DDC uses two synchronous decoders using different reduction rates.
+   - The decoders use different reduction rates thus they compute outputs in different granularities and learn different aspects of the input data.
+   - The model uses the consistency between these two decoders to increase robustness of learned text-to-spectrogram alignment.
+   - The model also applies a refinement to the final decoder output by applying the postnet iteratively multiple times. 
+   - DDC uses Batch Normalization in the prenet module and drops Dropout layers.
+   - DDC uses gradual training to reduce the total training time.
+   - We use a Multi-Band Melgan Generator as a vocoder trained with Multiple Random Window Discriminators differently than the original work.
+   - We are able to train a DDC model only in 2 days with a single GPU and the final model is able to generate faster than real-time speech on a CPU.
+  Demo page: https://erogol.github.io/ddc-samples/
+  Code: https://github.com/mozilla/TTS
+  ![image](https://erogol.com/wp-content/uploads/2020/06/DDC_overview-1536x1220.png)
 </details>
 
 ## Multi-Speaker Papers

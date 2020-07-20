@@ -92,6 +92,18 @@
 
 </details>
 
+<details>
+<summary> Non-Autoregressive Neural Text-to-Speech: http://arxiv.org/abs/1905.08459 (Click to Expand)</summary> 
+   - A derivation of Deep Voice 3 model using non-causal convolutional layers.
+   - Teacher-Student paradigm to train annon-autoregressive student with multiple attention blocks from an autoregressive teacher model.
+   - The teacher is used to generate text-to-spectrogram alignments to be used by the student model.
+   - The model is trained with two loss functions for attention alignment and spectrogram generation.
+   - Multi attention blocks refine the attention alignment layer by layer.
+   - The student uses dot-product attention with query, key and value vectors. The query is only positinal encoding vectors. The key and the value are the encoder outputs.
+   - Proposed model is heavily tied to the positional encoding which also relies on different constant values.
+  ![image](https://user-images.githubusercontent.com/1402048/87929772-3e218000-ca87-11ea-9f13-9869bee96b57.png)
+</details>
+
 ## Multi-Speaker Papers
 - Training Multi-Speaker Neural Text-to-Speech Systems using Speaker-Imbalanced Speech Corpora - https://arxiv.org/abs/1904.00771
 - Deep Voice 2 - https://papers.nips.cc/paper/6889-deep-voice-2-multi-speaker-neural-text-to-speech.pdf

@@ -206,6 +206,9 @@
 	
   - It is based on Probability Diffusion and Lagenvin Dynamics
   - The base idea is to learn a function that maps a known distribution to target data distribution iteratively.
+  - They report 0.2 real-time factor on a GPU but CPU performance is not shared.
+  - In the example code below, the author reports that the model converges after 2 days of training on a single GPU.
+  - MOS scores on the paper are not compherensive enough but shows comparable performance to known models like WaveRNN and WaveNet.
   
   Code: https://github.com/ivanvovk/WaveGrad
   ![image](https://user-images.githubusercontent.com/1402048/93461311-e071ae80-f8e4-11ea-82c6-e631301bbd27.png)

@@ -200,6 +200,18 @@
 	- Training has been done using Titan RTX 24GB batch size 96 for 600k iterations.
 	- MOS on LJSpeech: WaveGLow - 4.57, SqueezeWave (L=128 C=256) - 4.07 and SqueezeWave (L=64 C=256) - 3.77
 	- Smallest model has 21K samples per second on Raspi3.
+	
+<details>
+<summary>WaveGrad: https://arxiv.org/pdf/2009.00713.pdf </summary> 
+	
+  - It is based on Probability Diffusion and Lagenvin Dynamics
+  - The base idea is to learn a function that maps a known distribution to target data distribution iteratively.
+  
+  Code: https://github.com/ivanvovk/WaveGrad
+  ![image](https://user-images.githubusercontent.com/1402048/93461311-e071ae80-f8e4-11ea-82c6-e631301bbd27.png)
+</details>
+
+
 
 # From the Internet (Blogs, Videos etc)
 

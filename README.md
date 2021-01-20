@@ -150,6 +150,22 @@
   Code: https://github.com/ttaoREtw/semi-tts
   ![image](https://user-images.githubusercontent.com/1402048/93603135-de325180-f9c3-11ea-8081-7c1c3390b9f0.png)
 </details>
+<details>
+<summary> Attentron: Few-shot Text-to-Speech Exploiting Attention-based Variable Length Embedding: https://arxiv.org/abs/2005.08484 </summary> 
+	
+   - Use two encoders to learn speaker depended features.
+   - Coarse encoder learns a global speaker embedding vector based on provided reference spectrograms. 
+   - Fine encoder learns a variable length embedding keeping the temporal dimention in cooperation with a attention module.
+   - The attention selects important reference spectrogram frames to synthesize target speech.
+   - Pre-train the model with a single speaker dataset first (LJSpeech for 30k iters.)
+   - Fine-tune the model with a multi-speaker dataset. (VCTK for 70k iters.)
+   - It achieves slightly better metrics in comparison to using x-vectors from speaker classification model and VAE based reference audio encoder. 
+   
+
+  Demo page: https://hyperconnect.github.io/Attentron/ <br>
+  ![image](https://user-images.githubusercontent.com/1402048/105180385-cc57eb00-5b2a-11eb-9b9b-201153ee2029.png)
+  ![image](https://user-images.githubusercontent.com/1402048/105180441-e1347e80-5b2a-11eb-8968-3731a0119ff4.png)
+</details>
 
 ## Attention
 - LOCATION-RELATIVE ATTENTION MECHANISMS FOR ROBUST LONG-FORMSPEECH SYNTHESIS : https://arxiv.org/pdf/1910.10288.pdf

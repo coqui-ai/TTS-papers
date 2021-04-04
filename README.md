@@ -122,6 +122,7 @@
   ![image](https://erogol.com/wp-content/uploads/2020/06/DDC_overview-1536x1220.png)
 </details>
 
+<details>
 <summary> Parallel Tacotron2: http://arxiv.org/abs/2103.14574 (Click to Expand)</summary> 
 	
    - Does not require external duration information.

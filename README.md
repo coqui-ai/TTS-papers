@@ -122,6 +122,23 @@
   ![image](https://erogol.com/wp-content/uploads/2020/06/DDC_overview-1536x1220.png)
 </details>
 
+<summary> Parallel Tacotron2: http://arxiv.org/abs/2103.14574 (Click to Expand)</summary> 
+	
+   - Does not require external duration information.
+   - Solves the alignment issues between the real and ground-truth spectrograms by Soft-DTW loss.
+   - Predicted durations are converted to alignment by a learned conversion function, rather than a Length Regulator, to solve rounding issues.
+   - Learns an attention map over "Token Boundary Grids" which are computed from predicted durations. 
+   - Decoder is built on 6 "light-weight Convolutions" blocks.
+   - A VAE is used to project input spectrograms to latent features and merged with the characterr embeddings as an input to the network.
+   - Soft-DTW is computationally intensive since it computes pairwise difference for all the spectrogram frames. They contrain it with a certain diagonal window to reduce the overhead.
+   - The final duration objective is the sum of Duration Loss, VAE loss and Spectrogram Loss. 
+   - They only use proprietary datasets for the experiments 😦.
+   - Achieves the same MOS with the Tacotron2 model and outperforms ParallelTacotron.
+   - **Demo page**: https://google.github.io/tacotron/ publications/parallel_tacotron_2/index.html
+   - **Code**: No code so far 
+  <img src="https://user-images.githubusercontent.com/1402048/113508025-017eb180-954e-11eb-8cc5-c7dc87945bac.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png"  height="800"/>
+</details>
+
 ## Multi-Speaker Papers
 - Training Multi-Speaker Neural Text-to-Speech Systems using Speaker-Imbalanced Speech Corpora - https://arxiv.org/abs/1904.00771
 - Deep Voice 2 - https://papers.nips.cc/paper/6889-deep-voice-2-multi-speaker-neural-text-to-speech.pdf

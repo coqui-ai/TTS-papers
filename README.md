@@ -135,7 +135,7 @@
    - The final duration objective is the sum of Duration Loss, VAE loss and Spectrogram Loss. 
    - They only use proprietary datasets for the experiments 😦.
    - Achieves the same MOS with the Tacotron2 model and outperforms ParallelTacotron.
-   - **Demo page**: https://google.github.io/tacotron/ publications/parallel_tacotron_2/index.html
+   - **Demo page**: https://google.github.io/tacotron/publications/parallel_tacotron_2/index.html
    - **Code**: No code so far 
   <img src="https://user-images.githubusercontent.com/1402048/113508025-017eb180-954e-11eb-8cc5-c7dc87945bac.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png"  height="800"/>
 </details>

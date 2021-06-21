@@ -143,13 +143,13 @@
 <details>
 <summary> WaveGrad2: https://arxiv.org/pdf/2106.09660.pdf (Click to Expand)</summary>
 
-    - It computes the raw waveform directly from a phoneme sequence.
-    - A Tacotron2 like encoder model is used to compute a hidden representation from phonemes.
-    - Non-Attentive Tacotron like soft duration predictor to align the hidden represenatation with the output.
-    - They expand the hidden representation with the predicted durations and sample a certain window to convert to a waveform.
-    - **Demo page**: https://google.github.io/tacotron/publications/parallel_tacotron_2/index.html
-    - **Code**: No code so far
-  <img src="https://user-images.githubusercontent.com/1402048/122778044-ea2da580-d2ac-11eb-8446-e8903fc75291.png"  height="450"/>
+- It computes the raw waveform directly from a phoneme sequence.
+- A Tacotron2 like encoder model is used to compute a hidden representation from phonemes.
+- Non-Attentive Tacotron like soft duration predictor to align the hidden represenatation with the output.
+- They expand the hidden representation with the predicted durations and sample a certain window to convert to a waveform.
+- **Demo page**: Nothing so far
+- **Code**: No code so far
+<img src="https://user-images.githubusercontent.com/1402048/122778044-ea2da580-d2ac-11eb-8446-e8903fc75291.png"  height="450"/>
 </details>
 
 

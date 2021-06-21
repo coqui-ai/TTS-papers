@@ -147,9 +147,11 @@
 - A Tacotron2 like encoder model is used to compute a hidden representation from phonemes.
 - Non-Attentive Tacotron like soft duration predictor to align the hidden represenatation with the output.
 - They expand the hidden representation with the predicted durations and sample a certain window to convert to a waveform.
+- They explored different window sizes netween 64 and 256 frames corresponding to 0.8 and 3.2 secs of speech. They found that the larger is the better.
 - **Demo page**: Nothing so far
 - **Code**: No code so far
 <img src="https://user-images.githubusercontent.com/1402048/122778044-ea2da580-d2ac-11eb-8446-e8903fc75291.png"  height="450"/>
+<img src="https://user-images.githubusercontent.com/1402048/122779556-447b3600-d2ae-11eb-8544-187ea5668966.png"  height="450"/>
 </details>
 
 

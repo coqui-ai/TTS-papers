@@ -1,15 +1,15 @@
 (Feel free to suggest changes)
 # Papers
 - Merging Phoneme and Char representations: https://arxiv.org/pdf/1811.07240.pdf
-- Tacotron transfer learning : https://arxiv.org/pdf/1904.06508.pdf
-- phoneme timing from attention: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8683827
-- SEMI-SUPERVISED TRAINING FOR IMPROVING DATA EFFICIENCY IN END-TO-ENDSPEECH SYNTHESI - https://arxiv.org/pdf/1808.10128.pdf
+- Tacotron Transfer Learning : https://arxiv.org/pdf/1904.06508.pdf
+- Phoneme Timing From Attention: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8683827
+- Semi-Supervised Training to Improve Data Efficiency in End-to-End Speech Synthesis - https://arxiv.org/pdf/1808.10128.pdf
 - Listening while Speaking: Speech Chain by Deep Learning - https://arxiv.org/pdf/1707.04879.pdf
-- GENERALIZED END-TO-END LOSS FOR SPEAKER VERIFICATION: https://arxiv.org/pdf/1710.10467.pdf
+- Generelized End-to-End Loss for Speaker Verification: https://arxiv.org/pdf/1710.10467.pdf
 - Es-Tacotron2: Multi-Task Tacotron 2 with Pre-Trained Estimated Network for Reducing the Over-Smoothness Problem: https://www.mdpi.com/2078-2489/10/4/131/pdf
 	- Against Over-Smoothness
 - FastSpeech: https://arxiv.org/pdf/1905.09263.pdf
-- Learning singing from speech: https://arxiv.org/pdf/1912.10128.pdf
+- Learning Singing From Speech: https://arxiv.org/pdf/1912.10128.pdf
 - TTS-GAN: https://arxiv.org/pdf/1909.11646.pdf
     - they use duration and linguistic features for en2en TTS.
     - Close to WaveNet performance.
@@ -28,6 +28,7 @@
     - MOS values are slighly better than public Tacotron implementation.
 - Efficiently Trainable Text-to-Speech System Based on Deep Convolutional Networks with Guided Attention : https://arxiv.org/pdf/1710.08969.pdf
 
+### Expansive Summaries
 <details>
 <summary> End-to-End Adversarial Text-to-Speech: http://arxiv.org/abs/2006.03575 (Click to Expand)</summary>
 
@@ -154,6 +155,7 @@
 <img src="https://user-images.githubusercontent.com/1402048/122779556-447b3600-d2ae-11eb-8544-187ea5668966.png"  height="450"/>
 </details>
 
+______________________________________________________________________
 
 ## Multi-Speaker Papers
 - Training Multi-Speaker Neural Text-to-Speech Systems using Speaker-Imbalanced Speech Corpora - https://arxiv.org/abs/1904.00771
@@ -166,6 +168,7 @@
 - Fitting new speakers based on a short untranscribed sample - https://arxiv.org/pdf/1802.06984.pdf
 - Generalized end-to-end loss for speaker verification - https://arxiv.org/abs/1710.10467
 
+### Expansive Summaries
 <details>
 <summary> Semi-supervised Learning for Multi-speaker Text-to-speech Synthesis Using Discrete Speech Representation: http://arxiv.org/abs/2005.08024 </summary>
 
@@ -251,8 +254,12 @@
 
 </details>
 
+______________________________________________________________________
+
 ## Attention
-- LOCATION-RELATIVE ATTENTION MECHANISMS FOR ROBUST LONG-FORMSPEECH SYNTHESIS : https://arxiv.org/pdf/1910.10288.pdf
+- Location-Relative Attention Mechanisms for Robust Long-Formspeech Synthesis - https://arxiv.org/pdf/1910.10288.pdf
+
+______________________________________________________________________
 
 ## Vocoders
 - MelGAN: https://arxiv.org/pdf/1910.06711.pdf

@@ -200,6 +200,32 @@
   ![image](https://user-images.githubusercontent.com/1402048/105180441-e1347e80-5b2a-11eb-8968-3731a0119ff4.png)
 </details>
 
+<details>
+<summary> Towards Universal Text-to-Speech: http://www.interspeech2020.org/uploadfile/pdf/Wed-3-4-3.pdf </summary>
+
+   - A framework for a sequence to sequence multi-lingual TTS
+   - The model is trained with a very large, highly unbalanced dataset.
+   - The model is able to learn a new language with 6 minutes and a new speaker with 20 seconds of data after the initial training.
+   - The model architecture is a Transformer based Encoder-Decoder network with a Speaker Network and a Language Network for the speaker and language conditinoning. The outputs of these networks are concatenated to the Encoder output.
+   - The conditioning networks take a one-hot vector representing the speaker or language ID and projects it to a conditioning representation. 
+   - They use a WaveNet vocoder for converting predicted Mel-Spectrograms to the waveform output. 
+   - They use language depended phonemes inputs that are not shared among languages. 
+   - They sample each batch based on the inverse frequency of each language in the dataset. Thus each training batch has a uniform distribution over languages, alleviating the language imbalance in the training dataset.
+   - For learning new speakers/languages, they fine-tune the Encoder-Decoder model with the conditioning networks. They don’t train the WaveNet model.
+   - They use 1250 hours professional recordings from 50 languages for the training. 
+   - They use 16khz sampling rate for all the audio samples and trim silences at the beginning and the end of each clip. 
+   - They use 4 V100 GPUs for training but they don’t mention how long they trained the model. 
+   - The results show that single speaker models are better than the proposed approach in MOS metric.
+   - Also using conditioning networks is important for the long-tail languages in the dataset as they improve the MOS metric for them but impair the performance for the high-resource languages. 
+   - When they add a new speaker, they observe that using more than 5 minutes of data degrades the model performance. They claim that since these recordings are not as clean as the original recordings, using more of them affects the model’s general performance. 
+   - The multi-lingual model is able to train with only 6 minutes of data for new speakers and languages whereas a single speaker model requires 3 hours to train and cannot even attain similar MOS values as the 6 minutes multi-lingual model. 
+
+
+  Demo page: https://hyperconnect.github.io/Attentron/ <br>
+  ![image](https://user-images.githubusercontent.com/1402048/135748505-e7fd258a-39b6-437c-a542-14456d33344f.png)
+  ![image](https://user-images.githubusercontent.com/1402048/135748507-059f9f91-c838-4286-a2d6-0a29ded9738a.png)
+</details>
+
 ## Attention
 - LOCATION-RELATIVE ATTENTION MECHANISMS FOR ROBUST LONG-FORMSPEECH SYNTHESIS : https://arxiv.org/pdf/1910.10288.pdf
 

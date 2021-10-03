@@ -220,10 +220,35 @@
    - When they add a new speaker, they observe that using more than 5 minutes of data degrades the model performance. They claim that since these recordings are not as clean as the original recordings, using more of them affects the model’s general performance. 
    - The multi-lingual model is able to train with only 6 minutes of data for new speakers and languages whereas a single speaker model requires 3 hours to train and cannot even attain similar MOS values as the 6 minutes multi-lingual model. 
 
-
-  Demo page: https://hyperconnect.github.io/Attentron/ <br>
   ![image](https://user-images.githubusercontent.com/1402048/135748505-e7fd258a-39b6-437c-a542-14456d33344f.png)
   ![image](https://user-images.githubusercontent.com/1402048/135748507-059f9f91-c838-4286-a2d6-0a29ded9738a.png)
+</details>
+
+<details>
+<summary> AdaSpeech: Adaptive Text to Speech for Custom Voice: [paper](https://openreview.net/pdf?id=Drynvt7gg4L) </summary>
+
+   - They proposed a system that can adapt to different input acoustic properties of users and it uses minimum number of parameters to achieve this. 
+   - The main architecture is based on FastSpeech2 model that uses Pitch and Variance predictors to learn the finer granularities of the input speech. 
+   - They use 3 additional conditioning networks. 
+   - Utterance level. It takes mel-spectrogram of the reference speech as input. 
+   - Phoneme level. It takes phoneme level mel-spectrograms as input and computes phoneme-level conditioning vectors. Phoneme-level  mel-spectrograms are computed by taking the average spectrogram frame in the duration of each phoneme. 
+   - Phoneme level 2. It takes phoneme encoder outputs as inputs. This differs from the network above by just using the phoneme information without seeing the spectrograms. 
+   - All these conditioning networks and the back-bone FastSpeech2 uses Layer Normalisation layers. 
+   - Conditional layer normalisation. They propose fine-tuning only the scale and bias parameters of each layer normalisation layer when the model is fine-tuned for a new speaker. They train a speaker conditioning module for each Layer Norm layer that outputs a scale and a bias values. (They use one speaker conditioning module per Transformer block.)
+   - It means that you only store the Speaker Conditioning module for each new speaker and predict the scale and bias values at inference as you keep the rest of the model the same.  
+   - In the experiments, they train pre-train the model on LibriTTS dataset and fine-tune it with VCTK and LJSpeech
+   - The results show that using Conditional Layer Normalisation achieves better than their 2 baselines which use only speaker embedding and decoder network fine-tunning. 
+   - Their ablation study shows that the most significant part of the model is the “Phoneme level” network followed by Conditional Layer Normalisation and “Utterance level” network in an order.
+   - One important down-side of the paper is that there is almost no comparison with the literature and it makes the results harder to assess objectively. 
+
+  Demo page: https://speechresearch.github.io/adaspeech/ <br>
+  ![image](https://user-images.githubusercontent.com/1402048/135750827-24f74e2e-ec2f-4af7-ac6f-618309d7178d.png)
+  ![image](https://user-images.githubusercontent.com/1402048/135750837-3958d283-040e-4959-891b-10633455c7b4.png)
+  ![image](https://user-images.githubusercontent.com/1402048/135750845-c606e191-9f6e-4dc0-b50b-b3a1b3bc79c9.png)
+  ![image](https://user-images.githubusercontent.com/1402048/135750852-9e3291ae-8d37-41fc-9c88-7daccd2a2104.png)
+  ![image](https://user-images.githubusercontent.com/1402048/135750857-21565d3d-ef8a-42db-b3a6-ca225457fa1c.png)
+  ![image](https://user-images.githubusercontent.com/1402048/135750860-2c8e610b-c9b3-4bd7-a94f-5479ac6c87b6.png)
+
 </details>
 
 ## Attention

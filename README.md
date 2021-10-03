@@ -164,7 +164,7 @@
 - MODELING MULTI-SPEAKER LATENT SPACE TO IMPROVE NEURAL TTS QUICK ENROLLING NEW SPEAKER AND ENHANCING PREMIUM VOICE - https://arxiv.org/pdf/1812.05253.pdf
 - Transfer learning from speaker verification to multispeaker text-to-speech synthesis - https://arxiv.org/pdf/1806.04558.pdf
 - Fitting new speakers based on a short untranscribed sample - https://arxiv.org/pdf/1802.06984.pdf
-- Generalized end-to-end loss for speaker verification
+- Generalized end-to-end loss for speaker verification - https://arxiv.org/abs/1710.10467
 
 <details>
 <summary> Semi-supervised Learning for Multi-speaker Text-to-speech Synthesis Using Discrete Speech Representation: http://arxiv.org/abs/2005.08024 </summary>

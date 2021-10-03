@@ -225,7 +225,7 @@
 </details>
 
 <details>
-<summary> AdaSpeech: Adaptive Text to Speech for Custom Voice: [paper](https://openreview.net/pdf?id=Drynvt7gg4L) </summary>
+<summary> AdaSpeech: Adaptive Text to Speech for Custom Voice: https://openreview.net/pdf?id=Drynvt7gg4L </summary>
 
    - They proposed a system that can adapt to different input acoustic properties of users and it uses minimum number of parameters to achieve this. 
    - The main architecture is based on FastSpeech2 model that uses Pitch and Variance predictors to learn the finer granularities of the input speech. 

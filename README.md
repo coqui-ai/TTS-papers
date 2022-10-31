@@ -348,13 +348,27 @@ ______________________________________________________________________
 - Tacotron 2 : https://www.youtube.com/watch?v=2iarxxm-v9w
 
 ### Talks
-- End-to-End Text-to-Speech Synthesis, Part 1 : https://www.youtube.com/watch?v=RNKrq26Z0ZQ
+- Talk on Pushing the Frontier of Neural Text-to-Speech, by Xu Tan, 2021, https://youtu.be/MA8PCvmr8B0
+- Talk on Generative Model-Based Text-to-Speech Synthesis, by Heiga Zen, 2017
+	- Video: https://youtu.be/nsrSrYtKkT8
+	- Slide: https://research.google.com/pubs/pub45882.html
+- Tutorials on Neural Parametric Text-to-Speech Synthesis at ISCA Odyessy 2020, by Xin Wang, 2020
+	- Video: https://youtu.be/WCe7SYcDzAI
+	- Slide: http://tonywangx.github.io/slide.html#dec-2020
+- ISCA Speech Processing Course on Neural vocoders, 2022
+	- Basic components of neural vocoders: https://youtu.be/M833q5I-ZYs
+	- Deep generative models for speech compression (LPCNet): https://youtu.be/7KsnFx3pLgw
+	- Neural auto-regressive, source-filter and glottal vocoders: https://youtu.be/gPrmxdberX0
+		- Slide: http://tonywangx.github.io/slide.html#jul-2020
 - Speech synthesis from neural decoding of spoken sentences | AISC : https://www.youtube.com/watch?v=MNDtMDPmnMo
 - Generative Text-to-Speech Synthesis : https://www.youtube.com/watch?v=j4mVEAnKiNg
 - SPEECH SYNTHESIS FOR THE GAMING INDUSTRY : https://www.youtube.com/watch?v=aOHAYe4A-2Q
 
 ### General
 - Modern Text-to-Speech Systems Review : https://www.youtube.com/watch?v=8rXLSc-ZcRY
+
+## Jupyter notebooks
+- Tutorials on Selected Neural Vocoders: https://github.com/nii-yamagishilab/project-NN-Pytorch-scripts/tree/master/tutorials/b1_neural_vocoder
 
 ## Blogs
 - Text to Speech Deep Learning Architectures : http://www.erogol.com/text-speech-deep-learning-architectures/
